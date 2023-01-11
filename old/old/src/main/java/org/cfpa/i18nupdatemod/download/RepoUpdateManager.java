@@ -1,5 +1,5 @@
 package org.cfpa.i18nupdatemod.download;
-/*
+
 import java.io.File;
 
 import org.cfpa.i18nupdatemod.I18nUpdateMod;
@@ -128,4 +128,3 @@ public class RepoUpdateManager implements IDownloadManager {
     }
 
 }
- */

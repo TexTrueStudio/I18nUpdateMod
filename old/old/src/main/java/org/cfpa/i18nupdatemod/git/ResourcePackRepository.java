@@ -1,5 +1,5 @@
 package org.cfpa.i18nupdatemod.git;
-/*
+
 import static org.cfpa.i18nupdatemod.I18nUpdateMod.logger;
 
 import java.io.File;
@@ -202,4 +202,3 @@ public class ResourcePackRepository {
         return localPath;
     }
 }
- */

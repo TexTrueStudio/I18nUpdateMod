@@ -1,6 +1,6 @@
 {
-    "pack": {
-        "description": "I18nUpdateMod-NLTS resources",
-        "pack_format": 3
-    }
+  "pack": {
+    "description": "Resources for I18nUpdateMod-NLTS-Legacy",
+    "pack_format": 3
+  }
 }

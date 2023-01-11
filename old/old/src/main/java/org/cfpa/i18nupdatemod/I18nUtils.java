@@ -12,14 +12,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//import javax.annotation.Nonnull;
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiErrorScreen;
-//import net.minecraft.client.resources.Language;
 import net.minecraftforge.fml.client.CustomModLoadingErrorDisplayException;
-//import net.minecraftforge.fml.common.ICrashCallable;
+import net.minecraftforge.fml.common.ICrashCallable;
 import org.apache.commons.io.FileUtils;
 
 import com.google.common.base.Splitter;
@@ -41,7 +40,7 @@ public class I18nUtils {
         GameSettings gameSettings = mc.gameSettings;
         // 强行修改为简体中文
         if (!gameSettings.language.equals("zh_cn")) {
-            mc.getLanguageManager().getLanguage("zh_cn");
+            mc.getLanguageManager().currentLanguage = "zh_cn";
             gameSettings.language = "zh_cn";
         }
     }

@@ -1,8 +1,8 @@
 package org.cfpa.i18nupdatemod.hotkey;
 
-import mezz.jei.Internal;
-import mezz.jei.gui.overlay.ItemListOverlay;
-import mezz.jei.runtime.JeiRuntime;
+//import mezz.jei.Internal;
+//import mezz.jei.gui.overlay.ItemListOverlay;
+//import mezz.jei.runtime.JeiRuntime;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -13,7 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraftforge.client.event.GuiScreenEvent;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
-import net.minecraftforge.fml.common.Loader;
+//import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent;
 import org.apache.commons.io.IOUtils;
@@ -23,7 +23,7 @@ import org.cfpa.i18nupdatemod.I18nUtils;
 import org.lwjgl.input.Keyboard;
 
 import java.awt.*;
-import java.io.UnsupportedEncodingException;
+//import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URL;
 import java.net.URLEncoder;
@@ -83,7 +83,7 @@ public final class HotKeyHandler {
                 return;
             }
         }
-
+/*
         // JEI 支持
         if (Loader.isModLoaded("jei")) {
             try {
@@ -93,6 +93,8 @@ public final class HotKeyHandler {
                 I18nUpdateMod.logger.warn("Unable to get JEI item.", ex);
             }
         }
+
+ */
     }
 
     // 非 GUI 情况下的按键触发
@@ -124,6 +126,7 @@ public final class HotKeyHandler {
      * @param stack 物品
      * @return 是否成功
      */
+    /*
     private boolean openReport(ItemStack stack) {
         String text = String.format("模组ID：%s\n非本地化名称：%s\n显示名称：%s", stack.getItem().getCreatorModId(stack), stack.getItem().getUnlocalizedName(), stack.getDisplayName());
         String url = I18nConfig.key.reportURL;
@@ -136,6 +139,7 @@ public final class HotKeyHandler {
         }
         return true;
     }
+     */
 
     /**
      * 获取物品信息，并打开 weblate 对应界面
@@ -143,6 +147,7 @@ public final class HotKeyHandler {
      * @param stack 物品
      * @return 是否成功
      */
+    /*
     private boolean openWeblate(ItemStack stack) {
         String displayName, assetsName;
 
@@ -165,6 +170,7 @@ public final class HotKeyHandler {
         }
         return true;
     }
+     */
 
     /**
      * 获取物品信息，并打开 mcmod 对应界面
@@ -218,6 +224,7 @@ public final class HotKeyHandler {
      */
     private boolean handleKey(ItemStack stack) {
         if (stack != null && stack != ItemStack.EMPTY && stack.getItem() != Items.AIR) {
+            /*
             // 问题报告界面的打开
             if (keyCodeCheck(reportKey.getKeyCode()) && Keyboard.isKeyDown(mainKey.getKeyCode()) && Keyboard.getEventKey() == reportKey.getKeyCode()) {
                 return openReport(stack);
@@ -227,7 +234,7 @@ public final class HotKeyHandler {
                 return openWeblate(stack);
             }
             // mcmod 百科界面的打开
-            else if (keyCodeCheck(mcmodKey.getKeyCode()) && Keyboard.isKeyDown(mainKey.getKeyCode()) && Keyboard.getEventKey() == mcmodKey.getKeyCode()) {
+            else */ if (keyCodeCheck(mcmodKey.getKeyCode()) && Keyboard.isKeyDown(mainKey.getKeyCode()) && Keyboard.getEventKey() == mcmodKey.getKeyCode()) {
                 return openMcmod(stack);
             }
         }

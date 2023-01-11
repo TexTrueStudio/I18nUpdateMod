@@ -1,5 +1,5 @@
 package org.cfpa.i18nupdatemod.resourcepack;
-
+/*
 import static org.cfpa.i18nupdatemod.I18nUpdateMod.logger;
 
 import java.io.BufferedWriter;
@@ -15,7 +15,7 @@ import java.util.Set;
 import org.cfpa.i18nupdatemod.I18nConfig;
 import org.cfpa.i18nupdatemod.I18nUtils;
 import org.cfpa.i18nupdatemod.download.DownloadInfoHelper;
-import org.cfpa.i18nupdatemod.git.ResourcePackRepository;
+//import org.cfpa.i18nupdatemod.git.ResourcePackRepository;
 
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
@@ -138,3 +138,4 @@ public class ResourcePackBuilder {
     }
 
 }
+ */

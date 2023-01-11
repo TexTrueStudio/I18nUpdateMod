@@ -6,7 +6,7 @@ import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@Config(modid = I18nUpdateMod.MODID, name = "i18nupdatemod", category = "i18nupdatemod")
+@Config(modid = I18nUpdateMod.MODID, name = "i18n_update_mod", category = "i18n_mod")
 public class I18nConfig {
     @Config.Name("公告配置")
     public static Notice notice = new Notice();
@@ -45,11 +45,14 @@ public class I18nConfig {
         public int maxDay = 3;
 
         @Config.Name("本地资源包仓库路径")
-        @Config.Comment("默认 Auto 会根据系统自动选择路径\n Windows 的默认路径为 USER_HOME/AppData/I18nUpdateMod 。\n Linux/macOS 等类 Unix 系统默认路径为 USER_HOME/.I18nUpdateMod 。"
+        @Config.Comment(
+                "默认 Auto 会根据系统自动选择路径\n" +
+                        "Windows 的默认路径为 USER_HOME/AppData/I18nUpdateMod 。\n" +
+                        "Linux/macOS 等类 Unix 系统默认路径为 USER_HOME/.I18nUpdateMod 。"
         )
         @Config.RequiresMcRestart
         public String localRepoPath = "Auto";
-/*
+
         @Config.Name("远程资源包仓库地址列表")
         @Config.Comment("按列表中的顺序尝试从远程仓库获取更新")
         @Config.RequiresMcRestart
@@ -59,12 +62,11 @@ public class I18nConfig {
                 "https://github.com/CFPAOrg/Minecraft-Mod-Language-Package.git",
                 "https://git.cfpa.team/fallback.html"
         };
- */
 
         @Config.Name("生成的资源包名称")
         @Config.Comment("用来自定义模组生成的资源包名称")
         @Config.RequiresMcRestart
-        public String i18nLangPackName = "Minecraft-Mod-Language-Modpack";
+        public String i18nLangPackName = "I18n-Mod-Language-Pack";
 
         @Config.Name("下载条名称")
         @Config.Comment("用来自定义下载过程中小窗口的名字")
@@ -89,12 +91,10 @@ public class I18nConfig {
     }
 
     public static class Key {
-        /*
         @Config.Name("自定义反馈按键打开网址")
         @Config.Comment("可能会有人想自定义")
         @Config.RequiresMcRestart
         public String reportURL = "http://issues.cfpa.team";
-         */
 
         @Config.Name("是否关闭所有键位")
         @Config.Comment("为腐竹设计，防止玩家乱改按键导致问题")

@@ -10,23 +10,29 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.cfpa.i18nupdatemod.command.*;
 import org.cfpa.i18nupdatemod.download.DownloadInfoHelper;
-//import org.cfpa.i18nupdatemod.download.DownloadStatus;
-//import org.cfpa.i18nupdatemod.download.RepoUpdateManager;
-//import org.cfpa.i18nupdatemod.git.ResourcePackRepository;
+import org.cfpa.i18nupdatemod.download.DownloadStatus;
+import org.cfpa.i18nupdatemod.download.RepoUpdateManager;
+import org.cfpa.i18nupdatemod.git.ResourcePackRepository;
 import org.cfpa.i18nupdatemod.hotkey.HotKeyHandler;
 import org.cfpa.i18nupdatemod.installer.ResourcePackInstaller;
-//import org.cfpa.i18nupdatemod.resourcepack.ResourcePackBuilder;
+import org.cfpa.i18nupdatemod.notice.ShowNoticeFirst;
+import org.cfpa.i18nupdatemod.resourcepack.ResourcePackBuilder;
 
 import java.io.File;
 
 import static org.cfpa.i18nupdatemod.I18nUtils.isChinese;
 import static org.cfpa.i18nupdatemod.I18nUtils.setupLang;
 
-@Mod(modid = I18nUpdateMod.MODID, name = I18nUpdateMod.NAME, clientSideOnly = true, acceptedMinecraftVersions = "[1.12]", version = I18nUpdateMod.VERSION, dependencies = "after:defaultoptions")
+@Mod(modid = I18nUpdateMod.MODID,
+        name = I18nUpdateMod.NAME,
+        clientSideOnly = true,
+        acceptedMinecraftVersions = "[1.12]",
+        version = I18nUpdateMod.VERSION,
+        dependencies = "after:defaultoptions")
 public class I18nUpdateMod {
-    public final static String MODID = "i18nupdatemod";
-    public final static String NAME = "I18nUpdateMod-NLTS-Legacy";
-    public final static String VERSION = "0.1";
+    public final static String MODID = "i18nmod";
+    public final static String NAME = "I18n Update Mod";
+    public final static String VERSION = "@VERSION@";
 
     public static final Logger logger = LogManager.getLogger(MODID);
 
@@ -49,13 +55,10 @@ public class I18nUpdateMod {
         if (!I18nConfig.download.shouldDownload) {
             return;
         }
-        /*
 
         ResourcePackBuilder builder = new ResourcePackBuilder();
         boolean needUpdate = builder.checkUpdate();
         ResourcePackInstaller.setResourcesRepository();
-
-         */
 
         if (needUpdate) {
             String localPath;
@@ -65,7 +68,6 @@ public class I18nUpdateMod {
                 shouldDisplayErrorScreen = true;
                 return;
             }
-            /*
             ResourcePackRepository repo = new ResourcePackRepository(localPath, builder.getAssetDomains());
             RepoUpdateManager updateManager = new RepoUpdateManager(repo);
             updateManager.update();
@@ -74,8 +76,6 @@ public class I18nUpdateMod {
                 builder.touch();
                 ShowNoticeFirst.shouldShowNotice = true;
             }
-
-             */
         }
     }
 
@@ -95,7 +95,7 @@ public class I18nUpdateMod {
 
         // 命令注册
         ClientCommandHandler.instance.registerCommand(new CmdNotice());
-        //ClientCommandHandler.instance.registerCommand(new CmdReport());
+        ClientCommandHandler.instance.registerCommand(new CmdReport());
         ClientCommandHandler.instance.registerCommand(new CmdReload());
         ClientCommandHandler.instance.registerCommand(new CmdGetLangpack());
         ClientCommandHandler.instance.registerCommand(new CmdUpload());

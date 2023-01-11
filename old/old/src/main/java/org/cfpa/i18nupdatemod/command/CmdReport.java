@@ -1,5 +1,5 @@
 package org.cfpa.i18nupdatemod.command;
-/*
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.command.CommandBase;
@@ -47,4 +47,3 @@ public class CmdReport extends CommandBase {
         }
     }
 }
- */

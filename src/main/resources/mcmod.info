@@ -1,16 +1,16 @@
 [
-{
-  "modid": "i18nupdatemod",
-  "name": "I18nUpdateMod-NLTS-Legacy",
-  "description": "自动汉化更新",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["TexTrue"],
-  "credits": "CFPAOrg",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
-}
+  {
+    "modid": "${mod_id}",
+    "name": "I18nUpdateMod-NLTS-Legacy",
+    "description": "自动汉化更新",
+    "version": "${mod_version}",
+    "mcversion": "${mc_version}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["TexTrue"],
+    "credits": "CFPAOrg",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
 ]
